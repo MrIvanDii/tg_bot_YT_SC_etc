@@ -108,7 +108,7 @@ async def get_the_360p_video(message: types.Message):
 
 	with open(f'{title}.mp3', 'rb') as audio:
 		await message.answer_audio(audio)
-		os.remove(f'{title}.mp3')
+		os.remove(f'media_files/{title}.mp3')
 
 	await message.answer(f'{bot_messages.some_more}')
 
